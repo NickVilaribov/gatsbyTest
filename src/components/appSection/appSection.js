@@ -25,12 +25,12 @@ const AppSection = () => (
 							</li>
 						</ul>
 						<div className="app-section__btn-wrapper">
-							<Link to="https://apps.apple.com/tr/app/wallbox/id1188288011" target="_blank">
-								<img src={apple} alt="App Store"/>
-							</Link>
-							<Link to="https://play.google.com/store/apps/details?id=com.wallbox&hl=ru&gl=US" target="_blank">
-								<img src={google} alt="App Store"/>
-							</Link>
+							<a href="https://apps.apple.com/tr/app/wallbox/id1188288011" target="_blank">
+								<img src={apple} alt="App Store" width="135" height="41"/>
+							</a>
+							<a href="https://play.google.com/store/apps/details?id=com.wallbox&hl=ru&gl=US" target="_blank">
+								<img src={google} alt="App Store" width="135" height="41"/>
+							</a>
 						</div>
 					</div>
 					<div className="col-lg-6 d-flex flex-column justify-content-center">
@@ -52,12 +52,12 @@ const AppSection = () => (
 							/>
 						</div>
 						<div className="app-section__second-btn-wrapper">
-							<Link to="https://apps.apple.com/tr/app/wallbox/id1188288011" target="_blank">
-								<img src={apple} alt="App Store"/>
-							</Link>
-							<Link to="https://play.google.com/store/apps/details?id=com.wallbox&hl=ru&gl=US" target="_blank">
-								<img src={google} alt="App Store"/>
-							</Link>
+							<a href="https://apps.apple.com/tr/app/wallbox/id1188288011" target="_blank">
+								<img src={apple} alt="App Store" width="135" height="41"/>
+							</a>
+							<a href="https://play.google.com/store/apps/details?id=com.wallbox&hl=ru&gl=US" target="_blank">
+								<img src={google} alt="App Store" width="135" height="41"/>
+							</a>
 						</div>
 					</div>
 				</div>
