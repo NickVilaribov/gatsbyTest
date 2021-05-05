@@ -1,0 +1,53 @@
+.callback-section
+   background-color: $bgcolor1
+   border-radius: 20px
+   overflow: hidden
+   position: relative
+   margin-bottom: 7rem
+   +media-breakpoint-down(sm)
+   margin-bottom: 5rem
+   .callback-section__image
+      position: absolute
+      bottom: -0.2rem
+      left: 0
+      z-index: 0
+   .callback-section__container
+      padding: 3.75rem 0
+   .callback-section__title
+      font-size: 1.75rem
+      line-height: 1.3
+      margin-bottom: 2rem
+      +media-breakpoint-down(sm)
+         font-size: 1.5rem
+   .form
+      display: flex
+      +media-breakpoint-down(sm)
+         flex-direction: column
+      .form__item
+         margin-right: 2rem
+         input
+            border-radius: 0
+         &--first
+            flex: 1
+            min-width: 33.333%
+         +media-breakpoint-down(sm)
+            input
+               font-size: 1rem
+               padding-top: 1.5rem
+      .btn_wrapper
+         +media-breakpoint-down(sm)
+            margin-top: 1rem
+            display: flex
+            justify-content: center
+      .form__success
+         .message
+            line-height: 1.2
+            font-size: 1.75rem
+            +media-breakpoint-down(sm)
+               font-size: 1.5rem
+      .form__error
+         .message
+            line-height: 1.2
+            font-size: 1.75rem
+            +media-breakpoint-down(sm)
+               font-size: 1.5rem

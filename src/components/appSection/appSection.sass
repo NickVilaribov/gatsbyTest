@@ -1,0 +1,93 @@
+//App section
+.app-section
+   margin-bottom: 6rem
+   +media-breakpoint-down(sm)
+      margin-bottom: 5rem
+   .app-section__title
+      margin-bottom: 4rem
+      +media-breakpoint-down(sm)
+         margin-bottom: 2rem
+   .app-section__list
+      margin-bottom: 3rem
+      list-style-type: none
+      padding-left: 0
+      li
+         font-size: 1.125rem
+         margin-bottom: 1rem
+         padding-left: 1.5rem
+         position: relative
+         &::before
+            content: ''
+            position: absolute
+            top: 8px
+            left: 0px
+            width: 12px
+            height: 12px
+            border-radius: 12px
+            background-color: $accentcolor1
+   .app-section__btn-wrapper
+      +media-breakpoint-down(md)
+         display: none
+      a
+         margin-right: 0.75rem
+   .app-section__second-btn-wrapper
+      display: none
+      +media-breakpoint-down(md)
+         display: flex
+         justify-content: center
+         margin-top: 2rem
+         a
+            margin-right: 0.5rem
+            &:last-child
+               margin-right: 0
+   .app-section__img-wrapper
+      position: relative
+      width: 85%
+      margin: 0 auto
+      +media-breakpoint-down(lg)
+         width: 60%
+      +media-breakpoint-down(sm)
+         width: 80%
+      +media-breakpoint-down(xs)
+         width: 100%
+      .btn
+         z-index: 5
+         position: absolute
+         top: 50%
+         left: 50%
+         transform: translateX(-50%) translateY(-50%)
+      .app1
+         width: 100%
+         height: auto
+      .app2
+         position: absolute
+         top: 0
+         right: 0
+         bottom: 0
+         left: 0
+         width: 100%
+         height: auto
+      .app3
+         position: absolute
+         top: 0
+         right: 0
+         bottom: 0
+         left: 0
+         width: 100%
+         height: auto
+      .app4
+         position: absolute
+         top: 0
+         right: 0
+         bottom: 0
+         left: 0
+         width: 100%
+         height: auto
+      .app5
+         position: absolute
+         top: 0
+         right: 0
+         bottom: 0
+         left: 0
+         width: 100%
+         height: auto
