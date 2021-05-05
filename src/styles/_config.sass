@@ -283,3 +283,114 @@ a
          text-decoration: underline
          +media-breakpoint-down(sm)
             text-decoration: none
+
+/** Custom styles**/
+.section
+   .section__title
+      font-size: 2.25rem
+      font-weight: 600
+      line-height: 1.3
+      +media-breakpoint-down(sm)
+         font-size: 2rem
+
+.form
+   position: relative 
+   .form__item
+      position: relative
+      +media-breakpoint-down(xs)
+         margin-right: 0
+         width: 100%
+         margin-bottom: 0.75rem
+      input,textarea
+         position: relative
+         width: 100%
+         padding: 1.25rem 0rem 0.75rem 0rem
+         font-size: 0.875rem  
+         border-top: none
+         border-right: none
+         border-left: none
+         border-bottom: 2px solid $textcolor1
+         resize: none
+         color: $textcolor1
+         line-height: 1
+         background-color: transparent
+         transition: all 0.3s ease
+         &:focus
+            // border-bottom: 1px solid $accentcolor1 !important
+            // background-color: transparent
+            &::-webkit-input-placeholder
+               transition: opacity 0.4s ease
+               opacity: 0
+            &::-moz-placeholder
+               transition: opacity 0.4s ease
+               opacity: 0
+            &:-ms-input-placeholder
+               transition: opacity 0.4s ease
+               opacity: 0
+         &:focus + label
+            opacity: 1
+         &:not(:placeholder-shown) + label
+            opacity: 1       
+         &:required    
+            &:valid
+               //border-bottom: 1px solid $accentcolor1 !important
+               // background-color: transparent !important
+               // background: transparent !important
+         &:-webkit-autofill
+            /* use animation hack, if you have hard styled input */
+            transition: all 5000s ease-in-out 0s
+            transition-property: background-color, color
+            /* if input has one color, and didn't have bg-image use shadow */
+            -webkit-box-shadow: 0 0 0 1000px transparent inset
+            /* text color */
+            -webkit-text-fill-color: $textcolor1
+            /* font weigth */
+            font-weight: 300!important
+      label
+         position: absolute
+         font-size: 0.875rem
+         color: $accentcolor1
+         top: 0.15rem
+         left: 0rem
+         opacity: 0
+         z-index: 1
+         transition: all 0.3s ease
+      .description
+         padding: 0.5rem 1rem 0 1rem
+         font-size: 0.875rem
+         color: $textcolor2
+         line-height: 1.2   
+   .form__success, .form__error
+      display: none
+      position: absolute
+      z-index: 11
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      text-align: center
+      -webkit-transition: all 0.4s ease
+      -o-transition: all 0.4s ease
+      transition: all 0.4s ease
+      & ~ *
+         transition: all 0.4s ease
+      &.is-active
+         display: -webkit-flex
+         display: -moz-flex
+         display: -ms-flex
+         display: -o-flex
+         display: flex
+         align-items: center
+         justify-content: center
+         transition: all 0.4s ease
+         & ~ *
+            opacity: 0.5
+            filter: blur(5px)
+      .message
+         font-size: 2rem
+         font-weight: 600
+         text-align: center
+   &--white
+      .form__item
+         input,textarea
+            background-color: #fff      

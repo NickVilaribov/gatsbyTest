@@ -1,0 +1,101 @@
+// First section
+.first-slide
+  display: flex
+  align-items: flex-end
+  min-height: 650px
+  position: relative
+  +media-breakpoint-down(sm)
+      min-height: auto
+  .first-slide__image
+      position: absolute
+      top: 2rem
+      bottom: 0
+      right: 0
+      width: 50%
+      border-radius: 80px 0 0 80px
+      overflow: hidden
+      +media-breakpoint-down(md)
+        width: 33.3%
+      +media-breakpoint-down(sm)
+        width: 100%
+        top: 0
+        border-radius: 40px 0 0 40px
+        filter: brightness(0.65)
+  .first-slide__container
+      margin-bottom: 2rem
+      +media-breakpoint-down(sm)
+        margin: 6rem 0 3rem 0
+  .first-slide__title-part
+      margin-bottom: 5rem
+  .first-slide__title
+      font-size: 2.5rem
+      font-weight: 600
+      line-height: 1.3
+      margin-bottom: 2rem
+      +media-breakpoint-down(sm)
+        color: $white
+        font-size: 2rem
+  .first-slide__distr
+      display: flex
+      align-items: center
+      max-width: 80%
+      // +media-breakpoint-down(sm)
+      //    max-width: 100%
+      //    background-color: $white
+      //    border-radius: 0.25rem
+      //    padding: 0.5rem 
+      .number
+        font-weight: 600
+        font-size: 2.5rem
+        margin-right: 1.125rem
+        color: $accentcolor1
+        +media-breakpoint-down(sm)
+            font-size: 2rem
+            margin-right: 0.75rem
+      .text
+        font-size: 1rem
+        line-height: 1.2
+        font-weight: 500
+        +media-breakpoint-down(sm)
+            font-size: 0.875rem
+            color: $white
+  .first-slide__form-wrapper
+      .title
+        font-size: 1.125rem
+        font-weight: 600
+        margin-bottom: 2rem
+        +media-breakpoint-down(sm)
+            font-size: 1rem
+            color: $white
+            margin-bottom: 0.5rem
+      .form
+        display: flex
+        align-items: center
+        +media-breakpoint-down(sm)
+            flex-wrap: wrap
+        .form__item
+            margin-right: 2rem
+            +media-breakpoint-down(sm)
+              width: calc(50% - 1rem)
+              margin-right: 1rem
+              margin-bottom: 1.5rem
+              input
+                  border-bottom: 2px solid $white
+                  color: $white !important
+                  border-radius: 0
+              //@include placeholder
+              //    color: $white
+        .form__success
+            .message
+              line-height: 1.2
+              font-size: 2.5rem
+              +media-breakpoint-down(sm)
+                  color: $white
+                  font-size: 1.5rem
+        .form__error
+            .message
+              line-height: 1.2
+              font-size: 2.5rem
+              +media-breakpoint-down(sm)
+                  color: $white
+                  font-size: 1.5rem
