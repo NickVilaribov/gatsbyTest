@@ -12,6 +12,7 @@ import CatSection from "../components/catSection/catSection"
 import CbSection from "../components/cbSection/cbSection"
 import CompanySection from "../components/companySection/companySection"
 import PartnersSection from "../components/partnersSection/partnersSection"
+import ContactsSection from "../components/contactsSection/contactsSection"
 
 const IndexPage = () => (
   <Layout>
@@ -24,7 +25,7 @@ const IndexPage = () => (
     <CbSection />
     <CompanySection />
     <PartnersSection />
-    
+    <ContactsSection />
   </Layout>
 )
 
