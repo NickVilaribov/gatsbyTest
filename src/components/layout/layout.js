@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import MobileNav from "../mobileNavigation/mobileNavigation"
 import Header from "../header/header"
+import Footer from "../footer/footer"
 
 //import "./layout.css"
 
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
         <MobileNav />
         <Header/>
         <main>{children}</main>
+        <Footer />
       </div>
     </>
   )

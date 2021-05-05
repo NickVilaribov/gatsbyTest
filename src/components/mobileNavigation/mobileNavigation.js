@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import "./mobileNavigation.sass"
 
@@ -17,58 +15,58 @@ const closeMobileNav = () => {
 }
 
 const MobileNav = () => (
-<div class="mobile-navigation">
-   <div class="mobile-navigation__bgc"></div>
-   <div class="mobile-navigation__body">
-      <div class="mobile-navigation__top">
-         <div class="mobile-navigation__burger">
+<div className="mobile-navigation">
+   <div className="mobile-navigation__bgc"></div>
+   <div className="mobile-navigation__body">
+      <div className="mobile-navigation__top">
+         <div className="mobile-navigation__burger">
             <img src={burgerClose} alt="Close" onClick={closeMobileNav} />
          </div>
       </div>
-      <div class="mobile-navigation__center">
-         <ul class="menu menu--mobile">
-            <li class="menu__item"><a href="#why" class="menu__item">О бренде</a></li>
-            <li class="menu__item"><a href="#catalog" class="menu__item">Каталог</a>
-               <ul class="sub-menu">
-                  <li class="sub-menu__item">
+      <div className="mobile-navigation__center">
+         <ul className="menu menu--mobile">
+            <li className="menu__item"><a href="#why" className="menu__item">О бренде</a></li>
+            <li className="menu__item"><a href="#catalog" className="menu__item">Каталог</a>
+               <ul className="sub-menu">
+                  <li className="sub-menu__item">
                      <a href="#">
-                        <div class="icon">
+                        <div className="icon">
                            <img src={pulsar} alt="" />
                         </div>
-                        <div class="text">Pulsar</div>
+                        <div className="text">Pulsar</div>
                      </a>
                   </li>
-                  <li class="sub-menu__item is-active">
+                  <li className="sub-menu__item is-active">
                      <a href="#">
-                        <div class="icon">
+                        <div className="icon">
                            <img src={pulsarPlus} alt="" />
                         </div>
-                        <div class="text">Pulsar Plus</div>
+                        <div className="text">Pulsar Plus</div>
                      </a>
                   </li>
-                  <li class="sub-menu__item">
+                  <li className="sub-menu__item">
                      <a href="#">
-                        <div class="icon">
+                        <div className="icon">
                            <img src={commander} alt="" />
                         </div>
-                        <div class="text">Commander 2</div>
+                        <div className="text">Commander 2</div>
                      </a>
                   </li>
-                  <li class="sub-menu__item">
+                  <li className="sub-menu__item">
                      <a href="#">
-                        <div class="icon">
+                        <div className="icon">
                            <img src={cooper} alt="" />
                         </div>
-                        <div class="text">Cooper SB</div>
+                        <div className="text">Cooper SB</div>
                      </a>
                   </li>
                </ul>
             </li>
-            <li class="menu__item"><a href="#company" class="menu__item">О компании</a></li>
-            <li class="menu__item"><a href="#contacts" class="menu__item">Контакты</a></li>
-            <li class="menu__item"><a href="#partners" class="menu__item">Партнерам</a></li>
+            <li className="menu__item"><a href="#company" className="menu__item">О компании</a></li>
+            <li className="menu__item"><a href="#contacts" className="menu__item">Контакты</a></li>
+            <li className="menu__item"><a href="#partners" className="menu__item">Партнерам</a></li>
          </ul>
-         <div class="mobile-navigation__btns">
+         <div className="mobile-navigation__btns">
          </div>
       </div>
    </div>

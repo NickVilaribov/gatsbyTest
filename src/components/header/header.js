@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import "./header.sass"
 
@@ -11,6 +10,7 @@ const openMobileNav = () => {
   const menu = document.querySelector('.mobile-navigation')
   menu.classList.toggle('is-active')
 }
+
 const Header = () => (
   <header className="header">
   <div className="header__container	container-fluid">

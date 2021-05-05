@@ -29,7 +29,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    //`gatsby-plugin-sass`,
+    `gatsby-plugin-no-index`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
