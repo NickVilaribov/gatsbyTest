@@ -1,0 +1,49 @@
+/** HEADER **/
+.header 
+   padding: 1.25rem 0rem
+   .header__container 
+      display: flex
+      align-items: center
+      justify-content: space-between
+   
+   .header__logo 
+      margin-right: 2rem
+   
+   .header__menu 
+      display: flex
+      flex: 1
+      justify-content: flex-end
+      +media-breakpoint-down(sm)
+         display: none
+   .menu
+      margin-right: 3rem
+      +media-breakpoint-down(lg)
+         margin-right: 1.5rem
+      +media-breakpoint-down(md)
+         display: none   
+      .menu__item
+         margin-right: 2rem
+         font-size: 1.125rem
+         font-weight: 500
+         color: $textcolor1
+         &.is-active
+            color: $accentcolor1
+         &:hover
+            color: $accentcolor1   
+         &:last-child
+            margin-right: 0
+         +media-breakpoint-down(lg)
+            font-size: 1rem
+            margin-right: 1.75rem   
+               
+   .header__btn-wrapper
+      display: flex
+      .btn
+         +media-breakpoint-down(xs)
+            display: none
+   .header__burger
+      display: none
+      cursor: pointer
+      +media-breakpoint-down(md)
+         display: block
+         margin-left: 1rem
