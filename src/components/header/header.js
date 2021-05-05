@@ -5,8 +5,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import "./header.sass"
 
 import logo from '../../images/logo.svg'
+import burger from '../../images/burger--open.svg'
 
-
+const openMobileNav = () => {
+  const menu = document.querySelector('.mobile-navigation')
+  menu.classList.toggle('is-active')
+}
 const Header = () => (
   <header className="header">
   <div className="header__container	container-fluid">
@@ -27,7 +31,7 @@ const Header = () => (
             Связаться
         </div>
         <div className="header__burger">
-            
+            <img src={burger} alt="burger" onClick={openMobileNav}/>
         </div>
       </div>
   </div>

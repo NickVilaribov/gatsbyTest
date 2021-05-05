@@ -9,7 +9,9 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import MobileNav from "../mobileNavigation/mobileNavigation"
 import Header from "../header/header"
+
 //import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -18,6 +20,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="page-wrapper">
+        <MobileNav />
         <Header/>
         <main>{children}</main>
       </div>
