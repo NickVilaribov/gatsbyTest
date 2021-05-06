@@ -26,7 +26,7 @@ const Slide = () => {
 		fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formState })
+        body: encode({ "form-name": "submitForm", ...formState })
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
@@ -59,7 +59,7 @@ const Slide = () => {
 						</div>
 						<div className="first-slide__form-wrapper">
 							<div className="title">Нужна идеальная зарядная станция? Мы поможем!</div>
-							<form onSubmit={handleSubmit} method="post" name ="Form on First Slide" className="form" data-netlify="true" data-netlify-honeypot="bot-field">
+							<form onSubmit={handleSubmit} method="post" name ="submitForm" className="form" data-netlify="true" data-netlify-honeypot="bot-field">
 								<div className="form__success">
 									<span className="message">Thank you for request submition!</span>
 								</div>
@@ -67,7 +67,7 @@ const Slide = () => {
 									</span>
 								</div>
 								<div className="form__item">
-									<input type="hidden" name="form-name" value="Form on First Slide" />
+									<input type="hidden" name="form-name" value="submitForm" />
 									<input 
 										type="text"
 										name="name"
