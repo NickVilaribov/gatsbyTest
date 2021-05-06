@@ -59,7 +59,7 @@ const Slide = () => {
 						</div>
 						<div className="first-slide__form-wrapper">
 							<div className="title">Нужна идеальная зарядная станция? Мы поможем!</div>
-							<form onSubmit={handleSubmit} method="post" name ="Form on First Slide" className="form" data-netlify="true">
+							<form onSubmit={handleSubmit} method="post" name ="Form on First Slide" className="form" data-netlify="true" data-netlify-honeypot="bot-field">
 								<div className="form__success">
 									<span className="message">Thank you for request submition!</span>
 								</div>
