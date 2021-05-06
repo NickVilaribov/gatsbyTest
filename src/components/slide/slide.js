@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from "react"
 //import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -6,7 +6,35 @@ import "./slide.sass"
 
 
 
-const Slide = () => (
+const Slide = () => {
+	const [formState, setFormState] = useState({
+		name: "",
+		phone: ""
+	})
+	const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+	const handleChange = e => {
+		setFormState({
+			...formState,
+			[e.target.name]: e.target.value
+		})
+	}
+	const handleSubmit = e => {
+		fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formState })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      e.preventDefault(); 
+	}
+
+	return (
 	<section className="first-slide">
 			<div className="first-slide__image">
 				<StaticImage
@@ -31,7 +59,7 @@ const Slide = () => (
 						</div>
 						<div className="first-slide__form-wrapper">
 							<div className="title">Нужна идеальная зарядная станция? Мы поможем!</div>
-							<form method="POST" id="first-form" className="form" data-netlify="true">
+							<form onSubmit={handleSubmit} method="post" name ="Form on First Slide" className="form" data-netlify="true">
 								<div className="form__success">
 									<span className="message">Thank you for request submition!</span>
 								</div>
@@ -39,12 +67,27 @@ const Slide = () => (
 									</span>
 								</div>
 								<div className="form__item">
-									<input type="text" name="name" placeholder="Ваше имя" required/>
-									<label for="name">Ваше имя</label>
+									<input type="hidden" name="form-name" value="Form on First Slide" />
+									<input 
+										type="text"
+										name="name"
+										onChange={handleChange}
+										value={formState.name}	
+										placeholder="Ваше имя" required
+									/>
+									<label htmlFor="name">Ваше имя</label>
 								</div>
 								<div className="form__item">
-									<input type="phone" name="phone" className="phone-masked" placeholder="Телефон" required/>
-									<label for="email">Телефон</label>
+									<input 
+										type="phone" 
+										name="phone"
+										onChange={handleChange}
+										value={formState.phone} 
+										className="phone-masked" 
+										placeholder="Телефон" 
+										required
+									/>
+									<label htmlFor="email">Телефон</label>
 								</div>
 								<div className="btn_wrapper">
 									<button type="submit" className="btn btn--form">
@@ -57,6 +100,7 @@ const Slide = () => (
 				</div>
 			</div>
 		</section>	
-)
+	)
+}
 
 export default Slide
