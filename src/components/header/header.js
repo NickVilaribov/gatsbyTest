@@ -20,11 +20,11 @@ const Header = () => (
         </Link>
       </div>
       <nav className="header__menu menu">
-        <a href="#why" className="menu__item">О бренде</a>
-        <a href="#catalog" className="menu__item">Каталог</a>
-        <a href="#company" className="menu__item">О компании</a>
-        <a href="#contacts" className="menu__item">Контакты</a>
-        <a href="#partners" className="menu__item">Партнерам</a>
+        <Link to="/page-2/" className="menu__item">О бренде</Link>
+        <Link to="/#catalog" className="menu__item">Каталог</Link>
+        <Link to="/#company" className="menu__item">О компании</Link>
+        <Link to="/#contacts" className="menu__item">Контакты</Link>
+        <Link to="/#partners" className="menu__item">Партнерам</Link>
       </nav>
       <div className="header__btn-wrapper">
         <div className="btn btn--clean m-open" data-modal="modal-callback">

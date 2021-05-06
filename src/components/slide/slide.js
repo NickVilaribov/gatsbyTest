@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import * as React from "react"
 //import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -7,33 +7,6 @@ import "./slide.sass"
 
 
 const Slide = () => {
-	const [formState, setFormState] = useState({
-		name: "",
-		phone: ""
-	})
-	const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
-	const handleChange = e => {
-		setFormState({
-			...formState,
-			[e.target.name]: e.target.value
-		})
-	}
-	const handleSubmit = e => {
-		fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "submitForm", ...formState })
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
-
-      e.preventDefault(); 
-	}
-
 	return (
 	<section className="first-slide">
 			<div className="first-slide__image">
@@ -59,7 +32,7 @@ const Slide = () => {
 						</div>
 						<div className="first-slide__form-wrapper">
 							<div className="title">Нужна идеальная зарядная станция? Мы поможем!</div>
-							<form onSubmit={handleSubmit} method="post" name ="submitForm" className="form" data-netlify="true" data-netlify-honeypot="bot-field">
+							<form onSubmit="submit" method="post" action="/tnx" name ="slideForm" className="form" data-netlify="true" data-netlify-honeypot="bot-field">
 								<div className="form__success">
 									<span className="message">Thank you for request submition!</span>
 								</div>
@@ -67,12 +40,10 @@ const Slide = () => {
 									</span>
 								</div>
 								<div className="form__item">
-									<input type="hidden" name="form-name" value="submitForm" />
+									<input type="hidden" name="form-name" value="slideForm" />
 									<input 
 										type="text"
 										name="name"
-										onChange={handleChange}
-										value={formState.name}	
 										placeholder="Ваше имя" required
 									/>
 									<label htmlFor="name">Ваше имя</label>
@@ -81,8 +52,6 @@ const Slide = () => {
 									<input 
 										type="phone" 
 										name="phone"
-										onChange={handleChange}
-										value={formState.phone} 
 										className="phone-masked" 
 										placeholder="Телефон" 
 										required
