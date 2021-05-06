@@ -31,7 +31,7 @@ const Slide = () => (
 						</div>
 						<div className="first-slide__form-wrapper">
 							<div className="title">Нужна идеальная зарядная станция? Мы поможем!</div>
-							<form action="post" id="first-form" className="form" data-netlify="true">
+							<form method="POST" id="first-form" className="form" data-netlify="true">
 								<div className="form__success">
 									<span className="message">Thank you for request submition!</span>
 								</div>
